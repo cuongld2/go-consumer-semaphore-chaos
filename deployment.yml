@@ -15,11 +15,11 @@ spec:
     spec:
       containers:
       - name: application
-        image: cuongld2/my-consumer-app:latest
+        image: your_docker_hub_account/my-consumer-app:latest
         imagePullPolicy: Always
         envFrom:
         - secretRef:
-            name: test-secret
+            name: dockerhub-secret
         ports:
           - containerPort: 3000
         env:
@@ -40,5 +40,5 @@ kind: ConfigMap
 metadata:
   name: my-consumer-app
 data:
-  provider_url: "139.180.128.35"
+  provider_url: "139.180.223.84"
   provider_port: "3001"
