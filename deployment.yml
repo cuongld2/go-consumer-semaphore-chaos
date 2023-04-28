@@ -40,5 +40,5 @@ kind: ConfigMap
 metadata:
   name: my-consumer-app
 data:
-  provider_url: "139.180.223.84"
+  provider_url: "10.105.77.52"
   provider_port: "3001"
