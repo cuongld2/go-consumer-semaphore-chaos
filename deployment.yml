@@ -25,20 +25,6 @@ spec:
         env:
         # Define the environment variable
         - name: PROVIDER_URL 
-          valueFrom:
-            configMapKeyRef:
-              name: my-consumer-app           # The ConfigMap this value comes from.
-              key: provider_url # The key to fetch.
+          value: my-go-app-service
         - name: PROVIDER_PORT
-          valueFrom:
-            configMapKeyRef:
-              name: my-consumer-app
-              key: provider_port
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: my-consumer-app
-data:
-  provider_url: "10.105.77.52"
-  provider_port: "3001"
+          value: "3001"
